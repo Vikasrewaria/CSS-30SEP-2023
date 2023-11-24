@@ -1,0 +1,217 @@
+Task.1 
+Pproblem Statment 
+write code to position 5 equal-sized ( 50 X 50px) boxes A,B,C,D, AND E  as follows,
+1. Box A 200px from the left and 200 px from the top of the viewport.
+2. Box B-30px left, and -30px above from the center of the box A. 
+3. Box B-30px right, and -3px above from the center of box A.
+4. Box B-30px left, and -30px below from the center of box A.
+
+Answer:- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.box {
+        width: 50px;
+        height: 50px;
+        background-color: aquamarine;
+        border: 1px solid lightgreen;
+        text-align: center;
+    }
+    .boxA {
+        position: relative;
+        top: 200px;
+        left: 200px;
+    }
+    .boxB {
+       position: absolute;
+       left: -30px;
+       bottom: 30px;
+    }
+    .boxC {
+         position: absolute;
+         right: -30px;
+        bottom: 30px;
+    }
+    .boxD {
+        position: absolute;
+        left: -30px;
+        top: 30px;
+    }
+    .boxE {
+        position: absolute;
+        right: -30px;
+        top: 30px;
+    }
+    </style>
+</head>
+<body> 
+    <div class="box boxA">
+    A
+    <div class="box boxB">B</div>
+    <div class="box boxC">C</div>
+    <div class="box boxD">D</div>
+    <div class="box boxE">E</div>
+    </div>   
+</body>
+</html>
+
+Question:2 
+Problem statment
+Explain the differnce between absolute and relative positioning 
+
+
+
+
+
+Question:3. Problem Statment 
+Create a card as shown in the picture below. (You can use the css float property only for layout)
+Solution:- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.card {
+        padding: 10px;
+        background-color: beige;
+        border-radius: 5px;
+      }
+  .card-image {
+        float: right;
+        padding-left: 10px;
+        padding-right: 10px
+        }
+        </style>
+</head>
+<body> <div class="card">
+    <img
+      class="card-image"
+      src="https://random.imagecdn.app/300/180"
+ alt="random image">
+
+    <div class="card-body">
+        <h3 class="card-title">The Earth!!!</h3>
+        <p>
+          Nature is Earth's masterpiece, a symphony of life composed through
+          millennia. Its landscapes whisper tales of ancient mountains, winding
+          rivers, and flourishing forests, reminding us of the planet's
+          boundless beauty. From delicate petals to towering redwoods, nature's
+          artistry stirs awe and reconnects us to the essence of existence.
+          Nature is Earth's masterpiece, a symphony of life composed through
+          millennia. Its landscapes whisper tales of ancient mountains, winding
+          rivers, and flourishing forests.
+        </p>
+        </div>
+    </div>
+</body>
+</html>
+
+Question:4
+Prooblem Statment 
+Create a simple header that sticks to the top of a webpage upon scrolling.
+
+soltion:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <header class="header">
+          <div class="logo">LOGO</div>
+          <div class="nav">
+            <ul>
+              <li class="nav-item active">Home</li>
+              <li class="nav-item">Pricing</li>
+              <li class="nav-item">Contact</li>
+              <li class="nav-item">Terms and Condition</li>
+              <li class="nav-item button"><button>Get Started</button></li>
+            </ul>
+          </div>
+        </header>
+        <main>
+          <section>
+            <h3>Heading 1</h3>
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ossimus modi magni 
+  deleniti rerum provident minima nisi cum delectus, inventore, ...
+            </p>
+          </section>
+          <section>
+            <h3>Heading 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus modi 
+  magni deleniti rerum provident minima nisi cum
+  delectus, inventore, facere corrupti ...
+            </p>
+          </section>
+          <section>
+            <h3>Heading 3</h3>
+            <p>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus modi 
+                magni deleniti rerum provident minima nisi...                      
+            </p>    
+    </section>
+ </main>
+</div>
+</body>
+</html>
+
+Question:5. Problem statment 
+Explain the Z-index, with a code example.
+ 
+Solution: 
+The Z-index property in css is used to control the stacking order of positioned elements, primarily those with a position value of absolute, relative
+fixed , or sticky. It determines the order in which elements are stacked on top of each other along the z-axis, creating a 3D-like effect 
+even though web pages are inherently 2D.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+position: relative;
+}
+.box {
+position: absolute;
+width: 100px;
+height: 100px;
+font-size: 20px;
+color: white;
+padding: 5px;
+}
+.box__1 {
+background-color: red;
+}
+.box__2 {
+left: 50px;
+top: 50px;
+background-color: blue;
+z-index: 1;
+}
+.box__3 {
+left: 100px;
+top: 100px;
+background-color: green;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box__1">z-index 1</div>
+        <div class="box box__2">z-index 2</div>
+        <div class="box box__3">z-index 3</div>
+      </div>
+</body>
+</html>
